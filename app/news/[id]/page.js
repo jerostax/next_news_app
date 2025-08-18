@@ -1,8 +1,9 @@
-export default function NewsDetailPage() {
+export default function NewsDetailPage({ params }) {
+    const newsId = params.id;
   return (
     <div>
       <h1>News Detail Page</h1>
-      <p>Welcome to the news detail section of our application!</p>
+      <p>News ID : {newsId}</p>
     </div>
   );
 }
