@@ -1,3 +1,6 @@
+// This file is used to handle the case when a page is not found
+// It displays a message indicating that the page does not exist
+
 export default function NotFoundPage() {
   return (
     <div id="error">

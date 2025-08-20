@@ -1,3 +1,6 @@
+// This file is used to define the layout for the archive section of the application
+// It includes the archive filter and the latest news section
+
 export default function ArchiveLayout({ archive, latest }) {
   return (
     <div>

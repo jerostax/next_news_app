@@ -1,6 +1,10 @@
 import logo from "@/assets/logo.jpg";
 import Link from "next/link";
 
+// This is the home page of the application
+// It provides an introduction to the news site and links to the latest news
+// The page includes a logo and a brief description of the site's purpose
+
 export default function HomePage() {
   return (
     <div id="home">

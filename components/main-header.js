@@ -1,6 +1,9 @@
 import Link from "next/link";
 import NavLink from "./nav-link";
 
+// This component is used to create the main header of the application
+// It includes the logo and navigation links to the news and archive sections
+
 export default function MainHeader() {
   return (
     <header id="main-header">
