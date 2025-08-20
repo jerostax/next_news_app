@@ -1,3 +1,5 @@
+// This file is used to show a loading state while the news data is being fetched
+
 export default function NewsLoading() {
   return (
     <div className="loading">

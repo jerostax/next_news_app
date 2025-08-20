@@ -1,10 +1,15 @@
-import { DUMMY_NEWS } from "@/dummy-news";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default function NewsDetailPage({ params }) {
+import { getNewsItem } from "@/lib/news";
+
+// This page will display a single news item based on the slug
+// The slug is passed as a parameter in the URL
+// Example: /news/some-news-item-slug
+
+export default async function NewsDetailPage({ params }) {
   const newsSlug = params.slug;
-  const newsItem = DUMMY_NEWS.find((newsItem) => newsItem.slug === newsSlug);
+  const newsItem = await getNewsItem(newsSlug);
 
   if (!newsItem) {
     notFound(); // This will trigger the not-found page

@@ -1,9 +1,11 @@
+import { getNewsItem } from "@/lib/news";
 import { notFound } from "next/navigation";
-import { DUMMY_NEWS } from "@/dummy-news";
 
-export default function ImagePage({ params }) {
+// This file is used to display the full-screen image of a news item
+
+export default async function ImagePage({ params }) {
   const { slug } = params;
-  const newsItem = DUMMY_NEWS.find((newsItem) => newsItem.slug === slug);
+  const newsItem = await getNewsItem(slug);
 
   if (!newsItem) {
     notFound(); // This will trigger the not-found page
